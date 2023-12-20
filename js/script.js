@@ -179,7 +179,7 @@ function menu(event){
 const iconMenu = document.querySelector('.menu__icon');
 
 if(iconMenu){
-    const listMenu = document.querySelector('.menu__link');
+    const listMenu = document.querySelector('.menu__list');
     iconMenu.addEventListener("click", function(e){
         iconMenu.classList.toggle('_active');
         listMenu.classList.toggle('_active');

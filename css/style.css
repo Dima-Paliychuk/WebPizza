@@ -96,9 +96,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.menu__list ._active {
-  left: 0;
-}
 .menu__link {
   font-size: 18px;
   color: #000;
@@ -129,25 +126,37 @@ body {
 
 @media (max-width: 767px) {
   .menu__list {
-    gap: 10px;
+    gap: 30px;
     position: absolute;
     top: 0;
     left: 100%;
     width: 100%;
     height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-size: 40px;
     background-color: rgba(255, 255, 255, 0.8156862745);
-    padding-top: 32px;
+    margin-top: 55.4px;
+    padding-top: 30px;
     -webkit-transition: left 0.3s ease 0s;
     transition: left 0.3s ease 0s;
     overflow: auto;
+  }
+  .menu__list._active {
+    left: 0;
+  }
+  .menu__link {
+    font-size: 40px;
+  }
+  .menu__cart-button {
+    border-radius: 30px;
+  }
+  .menu__cart-button nav {
+    font-size: 40px;
+  }
+  .menu__cart-button img {
+    height: 40px;
   }
   .menu__icon {
     z-index: 60;
@@ -157,7 +166,7 @@ body {
     height: 18px;
     cursor: pointer;
   }
-  .menu__icon nav, .menu__icon::before, .menu__icon::after {
+  .menu__icon span, .menu__icon::before, .menu__icon::after {
     left: 0;
     position: absolute;
     height: 10%;
@@ -175,26 +184,31 @@ body {
   .menu__icon::after {
     bottom: 0;
   }
-  .menu__icon nav {
+  .menu__icon span {
     top: 50%;
     -webkit-transform: scale(1) translate(0px -50%);
             transform: scale(1) translate(0px -50%);
   }
-  .menu__icon ._active span {
+  .menu__icon._active span {
     -webkit-transform: scale(0) translate(0px, -50%);
             transform: scale(0) translate(0px, -50%);
   }
+  .menu__icon._active::before {
+    top: 50%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+            transform: rotate(-45deg) translate(0px, -50%);
+  }
+  .menu__icon._active::after {
+    top: 50%;
+    -webkit-transform: rotate(45deg) translate(0px, -50%);
+            transform: rotate(45deg) translate(0px, -50%);
+  }
   .cart._active {
     width: 100vw;
-    top: 0;
-    left: 0;
+    top: 55.4px;
   }
 }
 .cart {
-  display: none;
-}
-
-.cart._active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -202,8 +216,14 @@ body {
   background-color: rgba(255, 255, 255, 0.8156862745);
   height: 100%;
   width: 300px;
-  z-index: 100;
-  top: 61px;
+  z-index: 60;
+  top: 60.4px;
+  right: -300px;
+  -webkit-transition: right 0.3s ease 0s;
+  transition: right 0.3s ease 0s;
+}
+
+.cart._active {
   right: 0;
   -webkit-transform: translate(0px 0px);
           transform: translate(0px 0px);

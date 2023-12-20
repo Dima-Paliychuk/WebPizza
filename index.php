@@ -1,11 +1,6 @@
 <?php
 include "database.php";
 $result_pizza = mysqli_query($inclutions, "SELECT * FROM `pizza`");
-/*
-while($pizza = mysqli_fetch_assoc($result_pizza)){
-    echo $pizza['iamge'];
-}
-*/
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +22,7 @@ while($pizza = mysqli_fetch_assoc($result_pizza)){
                 </a>
                 <div class="header__menu menu">
                     <div class="menu__icon">
-                        <nav></nav>
+                        <span></span>
                     </div>
                     <ul class="menu__list">
                         <li class="menu__item"><a href="index.php" class="menu__link">Головна</a></li>
@@ -38,12 +33,12 @@ while($pizza = mysqli_fetch_assoc($result_pizza)){
                             <img src="img/icon/shop.svg" alt="Cart">
                             <nav>Кошик</nav>
                         </button>
-                        <div class="cart">
-                            <div class="cart__content">
-                                <nav>Ваше замовлення</nav>
-                            </div>
-                        </div>
                     </ul>
+                    <div class="cart">
+                        <div class="cart__content">
+                            <nav>Ваше замовлення</nav>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -54,7 +49,6 @@ while($pizza = mysqli_fetch_assoc($result_pizza)){
                     <div class="home__title">Вітаємо вас на нашому сайті WebPizza</div>
                     <div class="home__sub-title">У нас ви можете скуштувати страви приготовлені з душею</div>
                     <img class="home__photo1" src="/img/home/main_1.png" alt="">
-                    <div class="home__sub-title">Ось для ознайомлення наш асортимент Піцц, Напоїв та Салатів</div>
                 </div>
             </div>
         </main>

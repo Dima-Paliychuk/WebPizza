@@ -22,7 +22,7 @@ $result_salad = mysqli_query($inclutions, "SELECT * FROM `salads`");
                 </a>
                 <div class="header__menu menu">
                     <div class="menu__icon">
-                        <nav></nav>
+                        <span></span>
                     </div>
                     <ul class="menu__list">
                         <li class="menu__item"><a href="index.php" class="menu__link">Головна</a></li>
@@ -33,12 +33,12 @@ $result_salad = mysqli_query($inclutions, "SELECT * FROM `salads`");
                             <img src="img/icon/shop.svg" alt="Cart">
                             <nav>Кошик</nav>
                         </button>
-                        <div class="cart">
-                            <div class="cart__content">
-                                <nav>Ваше замовлення</nav>
-                            </div>
-                        </div>
                     </ul>
+                    <div class="cart">
+                        <div class="cart__content">
+                            <nav>Ваше замовлення</nav>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
